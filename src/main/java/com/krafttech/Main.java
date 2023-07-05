@@ -1,6 +1,8 @@
 package com.krafttech;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,25 +20,26 @@ public class Main {
      */
 
     public static String sumOfString(String str) {
-        String[] strArr=str.split(" ");
-        int sum=0;
-        int[] intArr=new int[strArr.length];
-        String result="";
+        String[] strArr = str.split(" ");
+        int sum = 0;
+        int[] intArr = new int[strArr.length];
+        String result = "";
 
         for (int i = 0; i < strArr.length; i++) {
             for (int j = 0; j < strArr[i].length(); j++) {
-                sum+=Integer.parseInt(strArr[i].substring(j,j+1));
+                sum += Integer.parseInt(strArr[i].substring(j, j + 1));
                 //sum+=Integer.parseInt(strArr[i].charAt(j)+"");
                 //sum+=Character.getNumericValue(strArr[i].charAt(j));
             }
-            intArr[i]=sum;
-            sum=0;
+            intArr[i] = sum;
+            sum = 0;
         }
         Arrays.sort(intArr);
 
-        for (int i:intArr){
-            result+=i+" ";
+        for (int i : intArr) {
+            result += i + " ";
         }
         return result.trim();
+
     }
 }
