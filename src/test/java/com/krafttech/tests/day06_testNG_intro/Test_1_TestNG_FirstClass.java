@@ -1,6 +1,6 @@
 package com.krafttech.tests.day06_testNG_intro;
 
-import com.krattech.utilities.WebDriverFactory;
+import com.krafttech.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
