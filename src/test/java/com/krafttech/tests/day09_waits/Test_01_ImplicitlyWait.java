@@ -1,6 +1,7 @@
 package com.krafttech.tests.day09_waits;
 
-import com.krattech.utilities.WebDriverFactory;
+
+import com.krafttech.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;

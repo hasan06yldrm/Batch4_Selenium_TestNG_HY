@@ -1,6 +1,7 @@
 package com.krafttech.tests.day09_waits;
 
-import com.krattech.utilities.WebDriverFactory;
+
+import com.krafttech.utilities.WebDriverFactory;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;

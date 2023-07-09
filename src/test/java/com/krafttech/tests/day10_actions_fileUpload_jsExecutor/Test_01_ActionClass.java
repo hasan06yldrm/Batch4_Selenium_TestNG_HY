@@ -1,12 +1,13 @@
 package com.krafttech.tests.day10_actions_fileUpload_jsExecutor;
 
-import com.krattech.utilities.WebDriverFactory;
+import com.krafttech.utilities.WebDriverFactory;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class Test_01_ActionClass {
@@ -96,7 +97,20 @@ public class Test_01_ActionClass {
 
         WebElement result = driver.findElement(By.tagName("pre"));
         System.out.println("result.getText() = " + result.getText());
+    }
+    @Test
+    public void rightClickOpenNewWindow() throws InterruptedException {
+        driver.get("https://testpages.herokuapp.com/styled/csspseudo/css-hover.html");
+        Thread.sleep(2000);
 
+        WebElement evilTesterPage=driver.findElement(By.linkText("EvilTester.com"));
 
+        actions.keyDown(Keys.LEFT_CONTROL).click(evilTesterPage)
+                .keyUp(Keys.LEFT_CONTROL).build().perform();
+
+        ArrayList<String> tab=new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(tab.get(1));
+
+        System.out.println("driver.getTitle() = " + driver.getTitle());
     }
 }
